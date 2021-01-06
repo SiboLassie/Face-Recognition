@@ -1,7 +1,7 @@
 # Realtime-Face-Recognition
 a Python Project to recognize multi faces on video or live camera and show the names using OpenCV and haar-cascade-frontal-face.
 
-# *To identify a particular person's face, the system must be trained first
+*To identify a particular person's face, the system must be trained first
 
 #How to Run
 	** Very important!
@@ -27,16 +27,16 @@ a Python Project to recognize multi faces on video or live camera and show the n
 	import time
 	import cv2
  
-# initialize the camera and grab a reference to the raw camera capture
+initialize the camera and grab a reference to the raw camera capture
 	camera = PiCamera()
 	camera.resolution = (640, 480)
 	camera.framerate = 32
 	rawCapture = PiRGBArray(camera, size=(640, 480))
  
-# allow the camera to warmup
+allow the camera to warmup
 	time.sleep(0.1)
  
-# capture frames from the camera
+capture frames from the camera
 	for frame in camera.capture_continuous(rawCapture, format="bgr", use_video_port=True):
 	# grab the raw NumPy array representing the image, then initialize the timestamp
 	# and occupied/unoccupied text
